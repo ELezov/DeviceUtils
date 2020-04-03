@@ -14,7 +14,6 @@
 		3341B71F237AE56B0086CDF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3341B71D237AE56B0086CDF7 /* LaunchScreen.storyboard */; };
 		3341B728237AE5850086CDF7 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B727237AE5850086CDF7 /* DeviceUtils.swift */; };
 		334E9E05237D679000CB27EB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334E9E04237D679000CB27EB /* WebKit.framework */; };
-		334E9E07237D9AEC00CB27EB /* motion.html in Resources */ = {isa = PBXBuildFile; fileRef = 334E9E06237D9AEC00CB27EB /* motion.html */; };
 		3376E6D5243683DF004F2E1A /* DiskSpaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D4243683DF004F2E1A /* DiskSpaceModel.swift */; };
 		3376E6D72436859C004F2E1A /* WifiInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D62436859C004F2E1A /* WifiInfoModel.swift */; };
 		3376E6D924368624004F2E1A /* CarrierInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D824368624004F2E1A /* CarrierInfoModel.swift */; };
@@ -43,7 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3341B70F237AE56A0086CDF7 /* DeviceUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3341B70F237AE56A0086CDF7 /* EasyDeviceUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyDeviceUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3341B712237AE56A0086CDF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3341B716237AE56A0086CDF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3341B719237AE56A0086CDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +51,6 @@
 		3341B720237AE56B0086CDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3341B727237AE5850086CDF7 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		334E9E04237D679000CB27EB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		334E9E06237D9AEC00CB27EB /* motion.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = motion.html; sourceTree = "<group>"; };
 		3376E6D4243683DF004F2E1A /* DiskSpaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskSpaceModel.swift; sourceTree = "<group>"; };
 		3376E6D62436859C004F2E1A /* WifiInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiInfoModel.swift; sourceTree = "<group>"; };
 		3376E6D824368624004F2E1A /* CarrierInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoModel.swift; sourceTree = "<group>"; };
@@ -84,7 +82,7 @@
 		3341B706237AE56A0086CDF7 = {
 			isa = PBXGroup;
 			children = (
-				3341B711237AE56A0086CDF7 /* DeviceUtils */,
+				3341B711237AE56A0086CDF7 /* EasyDeviceUtils */,
 				3341B710237AE56A0086CDF7 /* Products */,
 				334E9E03237D679000CB27EB /* Frameworks */,
 			);
@@ -93,12 +91,12 @@
 		3341B710237AE56A0086CDF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3341B70F237AE56A0086CDF7 /* DeviceUtils.app */,
+				3341B70F237AE56A0086CDF7 /* EasyDeviceUtils.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3341B711237AE56A0086CDF7 /* DeviceUtils */ = {
+		3341B711237AE56A0086CDF7 /* EasyDeviceUtils */ = {
 			isa = PBXGroup;
 			children = (
 				33F0F4D9237C13B200C6F84D /* DeviceUtilsDebug.entitlements */,
@@ -110,7 +108,7 @@
 				3341B71D237AE56B0086CDF7 /* LaunchScreen.storyboard */,
 				3341B720237AE56B0086CDF7 /* Info.plist */,
 			);
-			path = DeviceUtils;
+			path = EasyDeviceUtils;
 			sourceTree = "<group>";
 		};
 		3341B726237AE5770086CDF7 /* Core */ = {
@@ -138,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				3341B71B237AE56B0086CDF7 /* Assets.xcassets */,
-				334E9E06237D9AEC00CB27EB /* motion.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -161,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3341B70E237AE56A0086CDF7 /* DeviceUtils */ = {
+		3341B70E237AE56A0086CDF7 /* EasyDeviceUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3341B723237AE56B0086CDF7 /* Build configuration list for PBXNativeTarget "DeviceUtils" */;
+			buildConfigurationList = 3341B723237AE56B0086CDF7 /* Build configuration list for PBXNativeTarget "EasyDeviceUtils" */;
 			buildPhases = (
 				3341B70B237AE56A0086CDF7 /* Sources */,
 				3341B70C237AE56A0086CDF7 /* Frameworks */,
@@ -174,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = DeviceUtils;
+			name = EasyDeviceUtils;
 			productName = FraudResearch;
-			productReference = 3341B70F237AE56A0086CDF7 /* DeviceUtils.app */;
+			productReference = 3341B70F237AE56A0086CDF7 /* EasyDeviceUtils.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3341B70A237AE56A0086CDF7 /* Build configuration list for PBXProject "DeviceUtils" */;
+			buildConfigurationList = 3341B70A237AE56A0086CDF7 /* Build configuration list for PBXProject "EasyDeviceUtils" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -207,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3341B70E237AE56A0086CDF7 /* DeviceUtils */,
+				3341B70E237AE56A0086CDF7 /* EasyDeviceUtils */,
 			);
 		};
 /* End PBXProject section */
@@ -217,7 +214,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				334E9E07237D9AEC00CB27EB /* motion.html in Resources */,
 				3341B71F237AE56B0086CDF7 /* LaunchScreen.storyboard in Resources */,
 				3341B71C237AE56B0086CDF7 /* Assets.xcassets in Resources */,
 				3341B71A237AE56A0086CDF7 /* Main.storyboard in Resources */,
@@ -388,17 +384,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DeviceUtils/DeviceUtilsDebug.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EasyDeviceUtils/DeviceUtilsDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = EasyDeviceUtils/Resources/Assets.xcassets;
 				DEVELOPMENT_TEAM = 8FX7X5MR74;
-				INFOPLIST_FILE = DeviceUtils/Info.plist;
+				INFOPLIST_FILE = EasyDeviceUtils/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elezov.deviceUtils;
-				PRODUCT_NAME = DeviceUtils;
+				PRODUCT_NAME = EasyDeviceUtils;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -408,17 +405,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DeviceUtils/DeviceUtils.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EasyDeviceUtils/DeviceUtils.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = EasyDeviceUtils/Resources/Assets.xcassets;
 				DEVELOPMENT_TEAM = 8FX7X5MR74;
-				INFOPLIST_FILE = DeviceUtils/Info.plist;
+				INFOPLIST_FILE = EasyDeviceUtils/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elezov.deviceUtils;
-				PRODUCT_NAME = DeviceUtils;
+				PRODUCT_NAME = EasyDeviceUtils;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3341B70A237AE56A0086CDF7 /* Build configuration list for PBXProject "DeviceUtils" */ = {
+		3341B70A237AE56A0086CDF7 /* Build configuration list for PBXProject "EasyDeviceUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3341B721237AE56B0086CDF7 /* Debug */,
@@ -436,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3341B723237AE56B0086CDF7 /* Build configuration list for PBXNativeTarget "DeviceUtils" */ = {
+		3341B723237AE56B0086CDF7 /* Build configuration list for PBXNativeTarget "EasyDeviceUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3341B724237AE56B0086CDF7 /* Debug */,
