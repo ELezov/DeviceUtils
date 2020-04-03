@@ -15,6 +15,14 @@
 		3341B728237AE5850086CDF7 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B727237AE5850086CDF7 /* DeviceUtils.swift */; };
 		334E9E05237D679000CB27EB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334E9E04237D679000CB27EB /* WebKit.framework */; };
 		334E9E07237D9AEC00CB27EB /* motion.html in Resources */ = {isa = PBXBuildFile; fileRef = 334E9E06237D9AEC00CB27EB /* motion.html */; };
+		3376E6D5243683DF004F2E1A /* DiskSpaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D4243683DF004F2E1A /* DiskSpaceModel.swift */; };
+		3376E6D72436859C004F2E1A /* WifiInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D62436859C004F2E1A /* WifiInfoModel.swift */; };
+		3376E6D924368624004F2E1A /* CarrierInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D824368624004F2E1A /* CarrierInfoModel.swift */; };
+		3376E6DB24368692004F2E1A /* ProcessInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6DA24368692004F2E1A /* ProcessInfoModel.swift */; };
+		3376E6DD243686D9004F2E1A /* CPUInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6DC243686D9004F2E1A /* CPUInfoModel.swift */; };
+		3376E6DF24368737004F2E1A /* BatteryInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6DE24368737004F2E1A /* BatteryInfoModel.swift */; };
+		3376E6E124368794004F2E1A /* ModelInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6E024368794004F2E1A /* ModelInfoModel.swift */; };
+		3376E6E324368803004F2E1A /* ScreenInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6E224368803004F2E1A /* ScreenInfoModel.swift */; };
 		33BEFDEA237E95DF00F007C2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BEFDE9237E95DF00F007C2 /* HealthKit.framework */; };
 		33BEFDEC237E9F5900F007C2 /* LocalAuthentificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BEFDEB237E9F5900F007C2 /* LocalAuthentificationManager.swift */; };
 		33BEFDF0237EB4CA00F007C2 /* Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BEFDEF237EB4CA00F007C2 /* Compare.swift */; };
@@ -45,6 +53,14 @@
 		3341B727237AE5850086CDF7 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		334E9E04237D679000CB27EB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		334E9E06237D9AEC00CB27EB /* motion.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = motion.html; sourceTree = "<group>"; };
+		3376E6D4243683DF004F2E1A /* DiskSpaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskSpaceModel.swift; sourceTree = "<group>"; };
+		3376E6D62436859C004F2E1A /* WifiInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiInfoModel.swift; sourceTree = "<group>"; };
+		3376E6D824368624004F2E1A /* CarrierInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoModel.swift; sourceTree = "<group>"; };
+		3376E6DA24368692004F2E1A /* ProcessInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfoModel.swift; sourceTree = "<group>"; };
+		3376E6DC243686D9004F2E1A /* CPUInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUInfoModel.swift; sourceTree = "<group>"; };
+		3376E6DE24368737004F2E1A /* BatteryInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryInfoModel.swift; sourceTree = "<group>"; };
+		3376E6E024368794004F2E1A /* ModelInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInfoModel.swift; sourceTree = "<group>"; };
+		3376E6E224368803004F2E1A /* ScreenInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInfoModel.swift; sourceTree = "<group>"; };
 		33BEFDE9237E95DF00F007C2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		33BEFDEB237E9F5900F007C2 /* LocalAuthentificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthentificationManager.swift; sourceTree = "<group>"; };
 		33BEFDEF237EB4CA00F007C2 /* Compare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compare.swift; sourceTree = "<group>"; };
@@ -100,6 +116,7 @@
 		3341B726237AE5770086CDF7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3376E6D3243683AE004F2E1A /* UtilsModels */,
 				3341B727237AE5850086CDF7 /* DeviceUtils.swift */,
 				33F0F4DA237CACA700C6F84D /* JailbreakDetector.swift */,
 				33BEFDEB237E9F5900F007C2 /* LocalAuthentificationManager.swift */,
@@ -124,6 +141,21 @@
 				334E9E06237D9AEC00CB27EB /* motion.html */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3376E6D3243683AE004F2E1A /* UtilsModels */ = {
+			isa = PBXGroup;
+			children = (
+				3376E6D4243683DF004F2E1A /* DiskSpaceModel.swift */,
+				3376E6D62436859C004F2E1A /* WifiInfoModel.swift */,
+				3376E6D824368624004F2E1A /* CarrierInfoModel.swift */,
+				3376E6DA24368692004F2E1A /* ProcessInfoModel.swift */,
+				3376E6DC243686D9004F2E1A /* CPUInfoModel.swift */,
+				3376E6DE24368737004F2E1A /* BatteryInfoModel.swift */,
+				3376E6E024368794004F2E1A /* ModelInfoModel.swift */,
+				3376E6E224368803004F2E1A /* ScreenInfoModel.swift */,
+			);
+			path = UtilsModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,11 +232,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3341B717237AE56A0086CDF7 /* ViewController.swift in Sources */,
+				3376E6DF24368737004F2E1A /* BatteryInfoModel.swift in Sources */,
 				3341B713237AE56A0086CDF7 /* AppDelegate.swift in Sources */,
+				3376E6D72436859C004F2E1A /* WifiInfoModel.swift in Sources */,
+				3376E6DB24368692004F2E1A /* ProcessInfoModel.swift in Sources */,
 				33BEFDEC237E9F5900F007C2 /* LocalAuthentificationManager.swift in Sources */,
+				3376E6D5243683DF004F2E1A /* DiskSpaceModel.swift in Sources */,
 				33BEFDF0237EB4CA00F007C2 /* Compare.swift in Sources */,
 				33F0F4DB237CACA700C6F84D /* JailbreakDetector.swift in Sources */,
+				3376E6E324368803004F2E1A /* ScreenInfoModel.swift in Sources */,
 				3341B728237AE5850086CDF7 /* DeviceUtils.swift in Sources */,
+				3376E6E124368794004F2E1A /* ModelInfoModel.swift in Sources */,
+				3376E6DD243686D9004F2E1A /* CPUInfoModel.swift in Sources */,
+				3376E6D924368624004F2E1A /* CarrierInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

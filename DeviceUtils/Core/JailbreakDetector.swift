@@ -59,6 +59,7 @@ class JailbreakDetector {
 }
 
 fileprivate extension JailbreakDetector {
+    
     func canOpen(path: String) -> Bool {
         let file = fopen(path, "r")
         guard let existFile = file else { return false }

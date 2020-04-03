@@ -22,22 +22,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView.isHidden = true
-        
-        func loadHtmlFile() {
-            if let url = Bundle.main.url(forResource: "motion",
-                                         withExtension: "html") {
-                let request = URLRequest(url: url)
-                webView.load(request)
-            }
-        }
-        
-        loadHtmlFile()
-        if let url = URL(string: "https://www.google.com/") {
-            let request = URLRequest(url: url)
-            webView.load(request)
-        }
-        
 //        motionManager = CMMotionManager()
 //        motionManager.accelerometerUpdateInterval = 3
 //        motionManager.startAccelerometerUpdates(to: OperationQueue.main) { (data, error) in
@@ -65,20 +49,5 @@ class ViewController: UIViewController {
 //                  info.rotationRate.y,
 //                  info.rotationRate.z)
 //        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
-            self?.getHTML()
-        }
-    }
-    
-    func getHTML() {
-        webView.evaluateJavaScript("document.documentElement.innerHTML",
-                                   completionHandler: { (html: Any?, error: Error?) in
-            print(html)
-        })
     }
 }

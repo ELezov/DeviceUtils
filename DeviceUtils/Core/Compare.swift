@@ -8,28 +8,27 @@
 
 import Foundation
 
-
-func ==(lhs: DeviceUtils.ScreenModel.Scale, rhs: DeviceUtils.ScreenModel.Scale) -> Bool {
+func ==(lhs: ScreenInfoModel.Scale, rhs: ScreenInfoModel.Scale) -> Bool {
      guard lhs.rawValue > 0 && rhs.rawValue > 0 else { return false }
      return lhs.rawValue == rhs.rawValue
 }
 
-func <(lhs: DeviceUtils.ScreenModel.Scale, rhs: DeviceUtils.ScreenModel.Scale) -> Bool {
+func <(lhs: ScreenInfoModel.Scale, rhs: ScreenInfoModel.Scale) -> Bool {
      guard lhs.rawValue > 0 && rhs.rawValue > 0 else { return false }
      return lhs.rawValue < rhs.rawValue
  }
 
-func >(lhs: DeviceUtils.ScreenModel.Scale, rhs: DeviceUtils.ScreenModel.Scale) -> Bool {
+func >(lhs: ScreenInfoModel.Scale, rhs: ScreenInfoModel.Scale) -> Bool {
      guard lhs.rawValue > 0 && rhs.rawValue > 0 else { return false }
      return lhs.rawValue > rhs.rawValue
  }
 
-func <=(lhs: DeviceUtils.ScreenModel.Scale, rhs: DeviceUtils.ScreenModel.Scale) -> Bool {
+func <=(lhs: ScreenInfoModel.Scale, rhs: ScreenInfoModel.Scale) -> Bool {
      guard lhs.rawValue > 0 && rhs.rawValue > 0 else { return false }
      return lhs.rawValue <= rhs.rawValue
  }
 
-func >=(lhs: DeviceUtils.ScreenModel.Scale, rhs: DeviceUtils.ScreenModel.Scale) -> Bool {
+func >=(lhs: ScreenInfoModel.Scale, rhs: ScreenInfoModel.Scale) -> Bool {
      guard lhs.rawValue > 0 && rhs.rawValue > 0 else { return false }
      return lhs.rawValue >= rhs.rawValue
  }

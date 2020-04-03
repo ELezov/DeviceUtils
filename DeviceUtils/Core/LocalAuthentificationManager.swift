@@ -17,7 +17,6 @@ class LocalAuthentificationManager {
                                            error: nil)
     }
     
-    //
     func hasFingerprint() -> Bool {
         let context = LAContext()
         context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
