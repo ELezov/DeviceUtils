@@ -1,6 +1,6 @@
 //
 //  CPUInfoModel.swift
-//  DeviceUtils
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 02/04/2020.
 //  Copyright © 2020 ELezov. All rights reserved.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct CPUInfoModel {
+public struct CPUInfoModel {
     
-    func getCPUName() -> String {
+    public func getCPUName() -> String {
         let processorNames = Array(CPUinfo().keys)
         return processorNames[0]
     }
@@ -19,7 +19,6 @@ struct CPUInfoModel {
         let processorSpeed = Array(CPUinfo().values)
         return processorSpeed[0]
     }
-    
     
 }
 

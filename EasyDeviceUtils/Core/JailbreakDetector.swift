@@ -1,6 +1,6 @@
 //
 //  JailbreakDetector.swift
-//  FraudResearch
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 13/11/2019.
 //  Copyright © 2019 ELezov. All rights reserved.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class JailbreakDetector {
+public class JailbreakDetector {
     
-    var isJailbroken: Bool {
+    public static var isJailbroken: Bool {
         
-        #if targetEnvironment(simulator)
-        return false
-        #else
+        if EasyDeviceUtils.isSimulator {
+            return true
+        }
         
         if
             canOpen(path: "/Applications/Cydia.app") ||
@@ -54,13 +54,12 @@ class JailbreakDetector {
             return true
         }
         return false
-        #endif
     }
 }
 
 fileprivate extension JailbreakDetector {
     
-    func canOpen(path: String) -> Bool {
+    static func canOpen(path: String) -> Bool {
         let file = fopen(path, "r")
         guard let existFile = file else { return false }
         fclose(existFile)

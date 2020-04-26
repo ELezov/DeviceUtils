@@ -1,6 +1,6 @@
 //
 //  WifiInfoModel.swift
-//  DeviceUtils
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 02/04/2020.
 //  Copyright © 2020 ELezov. All rights reserved.
@@ -11,7 +11,7 @@ import SystemConfiguration.CaptiveNetwork
 /// Модель для получения информации о подключенном wifi
 public struct WifiInfoModel {
     
-    struct Info {
+    public struct Info {
         
         public let interface:String
         
@@ -28,7 +28,7 @@ public struct WifiInfoModel {
         }
     }
     
-    var ssid: String? {
+    public var ssid: String? {
         return getWifiInfo().first?.ssid
     }
     

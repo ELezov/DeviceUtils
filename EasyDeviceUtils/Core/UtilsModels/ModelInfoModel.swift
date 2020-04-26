@@ -1,6 +1,6 @@
 //
 //  ModelInfoModel.swift
-//  DeviceUtils
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 02/04/2020.
 //  Copyright © 2020 ELezov. All rights reserved.
@@ -11,16 +11,16 @@ import UIKit
 struct ModelInfoModel {
     
     // e.g. @"iPhone", @"iPod touch"
-    var modelString: String {
+    public var modelString: String {
         return UIDevice.current.model
     }
     
     // e.g. @"iPhone 8 Plus"
-    var modelDevice: String {
+    public var modelDevice: String {
         return getModelByDevice()
     }
     
-    var isIpadMini: Bool {
+    public var isIpadMini: Bool {
         return ["iPad Mini",
                 "iPad Mini 2",
                 "iPad Mini 3",

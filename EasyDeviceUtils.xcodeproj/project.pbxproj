@@ -12,7 +12,7 @@
 		3341B71A237AE56A0086CDF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3341B718237AE56A0086CDF7 /* Main.storyboard */; };
 		3341B71C237AE56B0086CDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3341B71B237AE56B0086CDF7 /* Assets.xcassets */; };
 		3341B71F237AE56B0086CDF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3341B71D237AE56B0086CDF7 /* LaunchScreen.storyboard */; };
-		3341B728237AE5850086CDF7 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B727237AE5850086CDF7 /* DeviceUtils.swift */; };
+		3341B728237AE5850086CDF7 /* EasyDeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B727237AE5850086CDF7 /* EasyDeviceUtils.swift */; };
 		334E9E05237D679000CB27EB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334E9E04237D679000CB27EB /* WebKit.framework */; };
 		3376E6D5243683DF004F2E1A /* DiskSpaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D4243683DF004F2E1A /* DiskSpaceModel.swift */; };
 		3376E6D72436859C004F2E1A /* WifiInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D62436859C004F2E1A /* WifiInfoModel.swift */; };
@@ -22,11 +22,40 @@
 		3376E6DF24368737004F2E1A /* BatteryInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6DE24368737004F2E1A /* BatteryInfoModel.swift */; };
 		3376E6E124368794004F2E1A /* ModelInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6E024368794004F2E1A /* ModelInfoModel.swift */; };
 		3376E6E324368803004F2E1A /* ScreenInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6E224368803004F2E1A /* ScreenInfoModel.swift */; };
+		33AE110B2455C605002D359C /* EasyDeviceUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE110A2455C605002D359C /* EasyDeviceUtilsTests.swift */; };
+		33AE11142455C737002D359C /* TestJailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE11132455C737002D359C /* TestJailbreak.swift */; };
+		33AE11152455C7F5002D359C /* JailbreakDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0F4DA237CACA700C6F84D /* JailbreakDetector.swift */; };
+		33AE11172455C8F4002D359C /* JailbreakDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0F4DA237CACA700C6F84D /* JailbreakDetector.swift */; };
+		33AE11192455DC5A002D359C /* EasyDeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B727237AE5850086CDF7 /* EasyDeviceUtils.swift */; };
+		33AE11222455DCA4002D359C /* DiskSpaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D4243683DF004F2E1A /* DiskSpaceModel.swift */; };
+		33AE11232455DCA4002D359C /* WifiInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D62436859C004F2E1A /* WifiInfoModel.swift */; };
+		33AE11242455DCA4002D359C /* CarrierInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6D824368624004F2E1A /* CarrierInfoModel.swift */; };
+		33AE11252455DCA4002D359C /* ProcessInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6DA24368692004F2E1A /* ProcessInfoModel.swift */; };
+		33AE11262455DCA4002D359C /* CPUInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6DC243686D9004F2E1A /* CPUInfoModel.swift */; };
+		33AE11272455DCA4002D359C /* BatteryInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6DE24368737004F2E1A /* BatteryInfoModel.swift */; };
+		33AE11282455DCA4002D359C /* ModelInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6E024368794004F2E1A /* ModelInfoModel.swift */; };
+		33AE11292455DCA4002D359C /* ScreenInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3376E6E224368803004F2E1A /* ScreenInfoModel.swift */; };
+		33AE112A2455DCCF002D359C /* Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BEFDEF237EB4CA00F007C2 /* Compare.swift */; };
+		33AE112C2455DCFD002D359C /* TestBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE112B2455DCFD002D359C /* TestBattery.swift */; };
+		33AE112E2455E1EE002D359C /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE112D2455E1EE002D359C /* TestModel.swift */; };
+		33AE11312455E273002D359C /* UIDevice+Idiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE11302455E273002D359C /* UIDevice+Idiom.swift */; };
+		33AE11322455E29D002D359C /* UIDevice+Idiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE11302455E273002D359C /* UIDevice+Idiom.swift */; };
+		33AE11362455E3CF002D359C /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE11352455E3CF002D359C /* TestScreen.swift */; };
+		33AE11382455E733002D359C /* TestDeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE11372455E733002D359C /* TestDeviceUtils.swift */; };
 		33BEFDEA237E95DF00F007C2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BEFDE9237E95DF00F007C2 /* HealthKit.framework */; };
 		33BEFDEC237E9F5900F007C2 /* LocalAuthentificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BEFDEB237E9F5900F007C2 /* LocalAuthentificationManager.swift */; };
 		33BEFDF0237EB4CA00F007C2 /* Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BEFDEF237EB4CA00F007C2 /* Compare.swift */; };
-		33F0F4DB237CACA700C6F84D /* JailbreakDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0F4DA237CACA700C6F84D /* JailbreakDetector.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33AE110D2455C605002D359C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3341B707237AE56A0086CDF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3341B70E237AE56A0086CDF7;
+			remoteInfo = EasyDeviceUtils;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		334E9DDE237D5BDB00CB27EB /* Embed Frameworks */ = {
@@ -49,7 +78,7 @@
 		3341B71B237AE56B0086CDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3341B71E237AE56B0086CDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3341B720237AE56B0086CDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3341B727237AE5850086CDF7 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
+		3341B727237AE5850086CDF7 /* EasyDeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyDeviceUtils.swift; sourceTree = "<group>"; };
 		334E9E04237D679000CB27EB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3376E6D4243683DF004F2E1A /* DiskSpaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskSpaceModel.swift; sourceTree = "<group>"; };
 		3376E6D62436859C004F2E1A /* WifiInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiInfoModel.swift; sourceTree = "<group>"; };
@@ -59,6 +88,15 @@
 		3376E6DE24368737004F2E1A /* BatteryInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryInfoModel.swift; sourceTree = "<group>"; };
 		3376E6E024368794004F2E1A /* ModelInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInfoModel.swift; sourceTree = "<group>"; };
 		3376E6E224368803004F2E1A /* ScreenInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInfoModel.swift; sourceTree = "<group>"; };
+		33AE11082455C605002D359C /* EasyDeviceUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyDeviceUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33AE110A2455C605002D359C /* EasyDeviceUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyDeviceUtilsTests.swift; sourceTree = "<group>"; };
+		33AE110C2455C605002D359C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33AE11132455C737002D359C /* TestJailbreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJailbreak.swift; sourceTree = "<group>"; };
+		33AE112B2455DCFD002D359C /* TestBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBattery.swift; sourceTree = "<group>"; };
+		33AE112D2455E1EE002D359C /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		33AE11302455E273002D359C /* UIDevice+Idiom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Idiom.swift"; sourceTree = "<group>"; };
+		33AE11352455E3CF002D359C /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		33AE11372455E733002D359C /* TestDeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeviceUtils.swift; sourceTree = "<group>"; };
 		33BEFDE9237E95DF00F007C2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		33BEFDEB237E9F5900F007C2 /* LocalAuthentificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthentificationManager.swift; sourceTree = "<group>"; };
 		33BEFDEF237EB4CA00F007C2 /* Compare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compare.swift; sourceTree = "<group>"; };
@@ -76,6 +114,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33AE11052455C605002D359C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				3341B711237AE56A0086CDF7 /* EasyDeviceUtils */,
+				33AE11092455C605002D359C /* EasyDeviceUtilsTests */,
 				3341B710237AE56A0086CDF7 /* Products */,
 				334E9E03237D679000CB27EB /* Frameworks */,
 			);
@@ -92,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				3341B70F237AE56A0086CDF7 /* EasyDeviceUtils.app */,
+				33AE11082455C605002D359C /* EasyDeviceUtilsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,11 +161,11 @@
 		3341B726237AE5770086CDF7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				33AE112F2455E258002D359C /* Extensions */,
 				3376E6D3243683AE004F2E1A /* UtilsModels */,
-				3341B727237AE5850086CDF7 /* DeviceUtils.swift */,
+				3341B727237AE5850086CDF7 /* EasyDeviceUtils.swift */,
 				33F0F4DA237CACA700C6F84D /* JailbreakDetector.swift */,
 				33BEFDEB237E9F5900F007C2 /* LocalAuthentificationManager.swift */,
-				33BEFDEF237EB4CA00F007C2 /* Compare.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -155,6 +202,37 @@
 			path = UtilsModels;
 			sourceTree = "<group>";
 		};
+		33AE11092455C605002D359C /* EasyDeviceUtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				33AE11122455C707002D359C /* Tests */,
+				33AE110A2455C605002D359C /* EasyDeviceUtilsTests.swift */,
+				33AE110C2455C605002D359C /* Info.plist */,
+			);
+			path = EasyDeviceUtilsTests;
+			sourceTree = "<group>";
+		};
+		33AE11122455C707002D359C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				33AE11132455C737002D359C /* TestJailbreak.swift */,
+				33AE112B2455DCFD002D359C /* TestBattery.swift */,
+				33AE112D2455E1EE002D359C /* TestModel.swift */,
+				33AE11352455E3CF002D359C /* TestScreen.swift */,
+				33AE11372455E733002D359C /* TestDeviceUtils.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		33AE112F2455E258002D359C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33BEFDEF237EB4CA00F007C2 /* Compare.swift */,
+				33AE11302455E273002D359C /* UIDevice+Idiom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,18 +254,40 @@
 			productReference = 3341B70F237AE56A0086CDF7 /* EasyDeviceUtils.app */;
 			productType = "com.apple.product-type.application";
 		};
+		33AE11072455C605002D359C /* EasyDeviceUtilsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33AE11112455C605002D359C /* Build configuration list for PBXNativeTarget "EasyDeviceUtilsTests" */;
+			buildPhases = (
+				33AE11042455C605002D359C /* Sources */,
+				33AE11052455C605002D359C /* Frameworks */,
+				33AE11062455C605002D359C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33AE110E2455C605002D359C /* PBXTargetDependency */,
+			);
+			name = EasyDeviceUtilsTests;
+			productName = EasyDeviceUtilsTests;
+			productReference = 33AE11082455C605002D359C /* EasyDeviceUtilsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3341B707237AE56A0086CDF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = ELezov;
 				TargetAttributes = {
 					3341B70E237AE56A0086CDF7 = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					33AE11072455C605002D359C = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3341B70E237AE56A0086CDF7;
 					};
 				};
 			};
@@ -205,6 +305,7 @@
 			projectRoot = "";
 			targets = (
 				3341B70E237AE56A0086CDF7 /* EasyDeviceUtils */,
+				33AE11072455C605002D359C /* EasyDeviceUtilsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +321,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33AE11062455C605002D359C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -230,21 +338,55 @@
 				3341B717237AE56A0086CDF7 /* ViewController.swift in Sources */,
 				3376E6DF24368737004F2E1A /* BatteryInfoModel.swift in Sources */,
 				3341B713237AE56A0086CDF7 /* AppDelegate.swift in Sources */,
+				33AE11172455C8F4002D359C /* JailbreakDetector.swift in Sources */,
 				3376E6D72436859C004F2E1A /* WifiInfoModel.swift in Sources */,
 				3376E6DB24368692004F2E1A /* ProcessInfoModel.swift in Sources */,
 				33BEFDEC237E9F5900F007C2 /* LocalAuthentificationManager.swift in Sources */,
 				3376E6D5243683DF004F2E1A /* DiskSpaceModel.swift in Sources */,
 				33BEFDF0237EB4CA00F007C2 /* Compare.swift in Sources */,
-				33F0F4DB237CACA700C6F84D /* JailbreakDetector.swift in Sources */,
 				3376E6E324368803004F2E1A /* ScreenInfoModel.swift in Sources */,
-				3341B728237AE5850086CDF7 /* DeviceUtils.swift in Sources */,
+				3341B728237AE5850086CDF7 /* EasyDeviceUtils.swift in Sources */,
 				3376E6E124368794004F2E1A /* ModelInfoModel.swift in Sources */,
+				33AE11312455E273002D359C /* UIDevice+Idiom.swift in Sources */,
 				3376E6DD243686D9004F2E1A /* CPUInfoModel.swift in Sources */,
 				3376E6D924368624004F2E1A /* CarrierInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33AE11042455C605002D359C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AE11222455DCA4002D359C /* DiskSpaceModel.swift in Sources */,
+				33AE110B2455C605002D359C /* EasyDeviceUtilsTests.swift in Sources */,
+				33AE112A2455DCCF002D359C /* Compare.swift in Sources */,
+				33AE112C2455DCFD002D359C /* TestBattery.swift in Sources */,
+				33AE11142455C737002D359C /* TestJailbreak.swift in Sources */,
+				33AE11362455E3CF002D359C /* TestScreen.swift in Sources */,
+				33AE11262455DCA4002D359C /* CPUInfoModel.swift in Sources */,
+				33AE11242455DCA4002D359C /* CarrierInfoModel.swift in Sources */,
+				33AE11152455C7F5002D359C /* JailbreakDetector.swift in Sources */,
+				33AE11382455E733002D359C /* TestDeviceUtils.swift in Sources */,
+				33AE11252455DCA4002D359C /* ProcessInfoModel.swift in Sources */,
+				33AE11272455DCA4002D359C /* BatteryInfoModel.swift in Sources */,
+				33AE11322455E29D002D359C /* UIDevice+Idiom.swift in Sources */,
+				33AE11282455DCA4002D359C /* ModelInfoModel.swift in Sources */,
+				33AE11292455DCA4002D359C /* ScreenInfoModel.swift in Sources */,
+				33AE112E2455E1EE002D359C /* TestModel.swift in Sources */,
+				33AE11232455DCA4002D359C /* WifiInfoModel.swift in Sources */,
+				33AE11192455DC5A002D359C /* EasyDeviceUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33AE110E2455C605002D359C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3341B70E237AE56A0086CDF7 /* EasyDeviceUtils */;
+			targetProxy = 33AE110D2455C605002D359C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3341B718237AE56A0086CDF7 /* Main.storyboard */ = {
@@ -422,6 +564,46 @@
 			};
 			name = Release;
 		};
+		33AE110F2455C605002D359C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EasyDeviceUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elezov.EasyDeviceUtilsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyDeviceUtils.app/EasyDeviceUtils";
+			};
+			name = Debug;
+		};
+		33AE11102455C605002D359C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EasyDeviceUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elezov.EasyDeviceUtilsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyDeviceUtils.app/EasyDeviceUtils";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -439,6 +621,15 @@
 			buildConfigurations = (
 				3341B724237AE56B0086CDF7 /* Debug */,
 				3341B725237AE56B0086CDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33AE11112455C605002D359C /* Build configuration list for PBXNativeTarget "EasyDeviceUtilsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33AE110F2455C605002D359C /* Debug */,
+				33AE11102455C605002D359C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

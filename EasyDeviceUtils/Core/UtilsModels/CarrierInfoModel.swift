@@ -1,6 +1,6 @@
 //
 //  CarrierInfoModel.swift
-//  DeviceUtils
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 02/04/2020.
 //  Copyright © 2020 ELezov. All rights reserved.

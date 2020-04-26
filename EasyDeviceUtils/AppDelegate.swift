@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  FraudResearch
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 12/11/2019.
 //  Copyright © 2019 ELezov. All rights reserved.
@@ -21,18 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = storyboard.instantiateInitialViewController()
         window?.makeKeyAndVisible()
         
-        let tap = UITapGestureRecognizer(target: self,
-                                         action: #selector(windowTap))
-        window?.addGestureRecognizer(tap)
-        
-        print(LocalAuthentificationManager().hasPasscode())
-        print(LocalAuthentificationManager().hasFingerprint())
         return true
     }
-    
-    @objc func windowTap() {
-        print("window tap")
-    }
-
 }
 

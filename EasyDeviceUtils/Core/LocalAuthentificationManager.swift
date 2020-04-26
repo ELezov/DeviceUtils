@@ -1,6 +1,6 @@
 //
 //  LocalAuthentificationManager.swift
-//  DeviceUtils
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 15/11/2019.
 //  Copyright © 2019 ELezov. All rights reserved.
@@ -17,7 +17,7 @@ class LocalAuthentificationManager {
                                            error: nil)
     }
     
-    func hasFingerprint() -> Bool {
+    func hasBiometryPrint() -> Bool {
         let context = LAContext()
         context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
         // Получаем текущие биометрические данные

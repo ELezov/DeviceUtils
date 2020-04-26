@@ -1,6 +1,6 @@
 //
 //  ScreenInfoModel.swift
-//  DeviceUtils
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 02/04/2020.
 //  Copyright © 2020 ELezov. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ScreenInfoModel {
+public struct ScreenInfoModel {
     
     public enum Screen: CGFloat {
         case unknown     = 0
@@ -50,14 +50,14 @@ struct ScreenInfoModel {
         }
     }
     
-    enum Scale: CGFloat, Comparable, Equatable {
+    public enum Scale: CGFloat, Comparable, Equatable {
         case x1      = 1.0
         case x2      = 2.0
         case x3      = 3.0
         case unknown = 0
     }
     
-    var scale: Scale {
+    public var scale: Scale {
         let scale = UIScreen.main.scale
         
         switch scale {
@@ -76,12 +76,12 @@ struct ScreenInfoModel {
     }
     
     /// Return `true` for retina displays
-    var isRetina: Bool {
+    public var isRetina: Bool {
         return scale > Scale.x1
     }
     
     
-    enum ScreenFamily: String {
+    public enum ScreenFamily: String {
         case unknown = "unknown"
         case old     = "old"
         case small   = "small"
@@ -89,22 +89,22 @@ struct ScreenInfoModel {
         case big     = "big"
     }
     
-    var brightness: CGFloat {
+    public var brightness: CGFloat {
         return UIScreen.main.brightness
     }
     
     /// Return `true` for landscape interface orientation
-    var isLandscape: Bool {
+    public var isLandscape: Bool {
         return ( UIApplication.shared.statusBarOrientation == .landscapeLeft
             || UIApplication.shared.statusBarOrientation == .landscapeRight )
     }
     
     /// Return `true` for portrait interface orientation
-    var isPortrait: Bool {
+    public var isPortrait: Bool {
         return !isLandscape
     }
     
-    var screen: Screen {
+    public var screen: Screen {
         let size = UIScreen.main.bounds.size
         let height = max(size.width, size.height)
         
@@ -128,7 +128,7 @@ struct ScreenInfoModel {
             return ( scale == .x3 ? .inches_6_5 : .inches_6_1 )
             
         case 1024:
-            if DeviceUtils.shared.modelInfo.isIpadMini {
+            if EasyDeviceUtils.shared.modelInfo.isIpadMini {
                 return .inches_7_9
             } else {
                 return .inches_9_7

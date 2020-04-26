@@ -1,6 +1,6 @@
 //
 //  ProcessInfoModel.swift
-//  DeviceUtils
+//  EasyDeviceUtils
 //
 //  Created by EugenKGD on 02/04/2020.
 //  Copyright © 2020 ELezov. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProcessInfoModel {
+public struct ProcessInfoModel {
     
     // Global unique identifier for the process.
     var globallyUniqueString: String {
