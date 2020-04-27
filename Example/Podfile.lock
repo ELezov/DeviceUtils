@@ -1,0 +1,16 @@
+PODS:
+  - EasyDeviceUtils (0.1.0)
+
+DEPENDENCIES:
+  - EasyDeviceUtils (from `../`)
+
+EXTERNAL SOURCES:
+  EasyDeviceUtils:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EasyDeviceUtils: 9290387d5bc1ba30e7341bc6414040743a4e62ed
+
+PODFILE CHECKSUM: f1b504c2f72d0e2786bb38b58f1207d998e1198e
+
+COCOAPODS: 1.8.4
