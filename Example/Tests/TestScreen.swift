@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import EasyDeviceUtils
 
 class TestScreen: XCTestCase {
 

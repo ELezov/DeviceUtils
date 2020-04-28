@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33D6D92F245856DF00BB7560 /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6D92A245856DF00BB7560 /* TestScreen.swift */; };
+		33D6D930245856DF00BB7560 /* TestBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6D92B245856DF00BB7560 /* TestBattery.swift */; };
+		33D6D931245856DF00BB7560 /* TestJailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6D92C245856DF00BB7560 /* TestJailbreak.swift */; };
+		33D6D932245856DF00BB7560 /* TestDeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6D92D245856DF00BB7560 /* TestDeviceUtils.swift */; };
+		33D6D933245856DF00BB7560 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6D92E245856DF00BB7560 /* TestModel.swift */; };
 		4621599D95C305348B885433 /* Pods_EasyDeviceUtils_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAC130A53F7431185B0E0B3 /* Pods_EasyDeviceUtils_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -30,6 +35,11 @@
 /* Begin PBXFileReference section */
 		06F37015BD00C1C8B8941E1E /* Pods_EasyDeviceUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDeviceUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DAC130A53F7431185B0E0B3 /* Pods_EasyDeviceUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDeviceUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33D6D92A245856DF00BB7560 /* TestScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		33D6D92B245856DF00BB7560 /* TestBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBattery.swift; sourceTree = "<group>"; };
+		33D6D92C245856DF00BB7560 /* TestJailbreak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestJailbreak.swift; sourceTree = "<group>"; };
+		33D6D92D245856DF00BB7560 /* TestDeviceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDeviceUtils.swift; sourceTree = "<group>"; };
+		33D6D92E245856DF00BB7560 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EasyDeviceUtils_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyDeviceUtils_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +134,11 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				33D6D92B245856DF00BB7560 /* TestBattery.swift */,
+				33D6D92D245856DF00BB7560 /* TestDeviceUtils.swift */,
+				33D6D92C245856DF00BB7560 /* TestJailbreak.swift */,
+				33D6D92E245856DF00BB7560 /* TestModel.swift */,
+				33D6D92A245856DF00BB7560 /* TestScreen.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -341,6 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				33D6D932245856DF00BB7560 /* TestDeviceUtils.swift in Sources */,
+				33D6D930245856DF00BB7560 /* TestBattery.swift in Sources */,
+				33D6D933245856DF00BB7560 /* TestModel.swift in Sources */,
+				33D6D92F245856DF00BB7560 /* TestScreen.swift in Sources */,
+				33D6D931245856DF00BB7560 /* TestJailbreak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -479,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EasyDeviceUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -494,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EasyDeviceUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

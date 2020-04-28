@@ -1,8 +1,8 @@
 {
   "name": "EasyDeviceUtils",
   "version": "0.1.0",
-  "summary": "A short description of EasyDeviceUtils.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Simple solution for getting info about device",
+  "description": "EasyDeviceUtils is a simple solution for getting info about device.",
   "homepage": "https://github.com/ELezov/EasyDeviceUtils",
   "license": {
     "type": "MIT",
@@ -16,7 +16,9 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
-  "source_files": "EasyDeviceUtils/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "EasyDeviceUtils/Classes/**/*",
+  "swift_version": "5.0"
 }

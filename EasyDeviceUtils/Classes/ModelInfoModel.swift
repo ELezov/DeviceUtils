@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ModelInfoModel {
+public struct ModelInfoModel {
     
     // e.g. @"iPhone", @"iPod touch"
     public var modelString: String {

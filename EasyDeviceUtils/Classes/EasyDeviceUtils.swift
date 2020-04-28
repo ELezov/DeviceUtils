@@ -14,7 +14,7 @@ import CoreTelephony
 
 public class EasyDeviceUtils {
     
-    static var shared: EasyDeviceUtils = {
+    public static var shared: EasyDeviceUtils = {
         let instance = EasyDeviceUtils()
         return instance
     }()
@@ -27,11 +27,11 @@ public class EasyDeviceUtils {
         #endif
     }
     
-    var GMToffset: Int {
+    public var GMToffset: Int {
         return TimeZone.current.secondsFromGMT() / 3600
     }
     
-    var localeCode: String? {
+    public var localeCode: String? {
         return Locale.current.regionCode
     }
 }
@@ -45,58 +45,58 @@ extension EasyDeviceUtils: NSCopying {
 extension EasyDeviceUtils {
     
     // For example: "com.elezov.deviceUtils"
-    var appIdentifier: String? {
+    public var appIdentifier: String? {
         return Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String
     }
     
     // An alphanumeric string that uniquely identifies a device to the app’s vendor.
     // For examle: "FDE442FD-6B1E-4AFD-B8BF-F87F699EDFA2"
-    var uniqueIdentifier: String? {
+    public var uniqueIdentifier: String? {
         return UIDevice.current.identifierForVendor?.uuidString
     }
     
     // e.g. "My iPhone"
-    var userDeviceName: String {
+    public var userDeviceName: String {
         return UIDevice.current.name
     }
     
-    var systemInfo: SystemInfo {
+    public var systemInfo: SystemInfo {
         return SystemInfo()
     }
     
-    var batteryInfo: BatteryInfoModel {
+    public var batteryInfo: BatteryInfoModel {
         return BatteryInfoModel()
     }
     
-    var modelInfo: ModelInfoModel {
+    public var modelInfo: ModelInfoModel {
         return ModelInfoModel()
     }
     
-    var cpuInfo: CPUInfoModel {
+    public var cpuInfo: CPUInfoModel {
         return CPUInfoModel()
     }
     
-    var processInfo: ProcessInfoModel {
+    public var processInfo: ProcessInfoModel {
         return ProcessInfoModel()
     }
     
-    var carrierInfo: CarrierInfoModel {
+    public var carrierInfo: CarrierInfoModel {
         return CarrierInfoModel()
     }
     
-    var wifiInfo: WifiInfoModel {
+    public var wifiInfo: WifiInfoModel {
         return WifiInfoModel()
     }
     
-    var diskSpace: DiskSpaceModel {
+    public var diskSpace: DiskSpaceModel {
         return DiskSpaceModel()
     }
     
-    var screen: ScreenInfoModel {
+    public var screen: ScreenInfoModel {
         return ScreenInfoModel()
     }
     
-    struct SystemInfo {
+    public struct SystemInfo {
         // @"iOS"
         var systemName: String {
             return UIDevice.current.systemName
