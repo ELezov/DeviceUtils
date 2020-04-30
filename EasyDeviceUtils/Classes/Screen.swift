@@ -1,5 +1,5 @@
 //
-//  ScreenInfoModel.swift
+//  Screen.swift
 //  EasyDeviceUtils
 //
 //  Created by EugenKGD on 02/04/2020.
@@ -8,9 +8,14 @@
 
 import UIKit
 
-public struct ScreenInfoModel {
+public struct Screen {
     
-    public enum Screen: CGFloat {
+    public enum Orienatation {
+        case landscape
+        case portrait
+    }
+    
+    public enum Diagonal: CGFloat {
         case unknown     = 0
         case inches_3_5  = 3.5
         case inches_4_0  = 4.0
@@ -57,19 +62,21 @@ public struct ScreenInfoModel {
         case unknown = 0
     }
     
+    
+    public var orienatation: Orienatation {
+        return isLandscape ? .landscape : .portrait
+    }
+    
     public var scale: Scale {
         let scale = UIScreen.main.scale
         
         switch scale {
         case 1.0:
             return .x1
-            
         case 2.0:
             return .x2
-            
         case 3.0:
             return .x3
-            
         default:
             return .unknown
         }
@@ -80,7 +87,6 @@ public struct ScreenInfoModel {
         return scale > Scale.x1
     }
     
-    
     public enum ScreenFamily: String {
         case unknown = "unknown"
         case old     = "old"
@@ -89,22 +95,11 @@ public struct ScreenInfoModel {
         case big     = "big"
     }
     
-    public var brightness: CGFloat {
-        return UIScreen.main.brightness
+    public var brightness: Int {
+        return Int(UIScreen.main.brightness * 100)
     }
     
-    /// Return `true` for landscape interface orientation
-    public var isLandscape: Bool {
-        return ( UIApplication.shared.statusBarOrientation == .landscapeLeft
-            || UIApplication.shared.statusBarOrientation == .landscapeRight )
-    }
-    
-    /// Return `true` for portrait interface orientation
-    public var isPortrait: Bool {
-        return !isLandscape
-    }
-    
-    public var screen: Screen {
+    public var diagonal: Diagonal {
         let size = UIScreen.main.bounds.size
         let height = max(size.width, size.height)
         
@@ -140,5 +135,13 @@ public struct ScreenInfoModel {
         default:
             return .unknown
         }
+    }
+}
+
+fileprivate extension Screen {
+    /// Return `true` for landscape interface orientation
+    var isLandscape: Bool {
+        return ( UIApplication.shared.statusBarOrientation == .landscapeLeft
+             || UIApplication.shared.statusBarOrientation == .landscapeRight )
     }
 }

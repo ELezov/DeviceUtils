@@ -23,8 +23,8 @@ class ViewController: UIViewController {
         let device = EasyDeviceUtils.shared
         deviceInfo["App Identifier"] = device.appIdentifier ?? ""
         deviceInfo["Locale code"] = device.localeCode ?? ""
-        deviceInfo["Battery level"] = device.batteryInfo.level.description
-        deviceInfo["Battery state"] = String(device.batteryInfo.state.rawValue)
+        deviceInfo["Battery level"] = "\(device.battery.level)"
+        deviceInfo["Battery state"] = device.battery.state.description
         deviceInfo["User device name"] = device.userDeviceName
         deviceInfo["Model device name"] = device.modelInfo.modelDevice
         deviceInfo["Model name"] = device.modelInfo.modelString

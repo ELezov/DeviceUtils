@@ -64,8 +64,8 @@ extension EasyDeviceUtils {
         return SystemInfo()
     }
     
-    public var batteryInfo: BatteryInfoModel {
-        return BatteryInfoModel()
+    public var battery: Battery {
+        return Battery()
     }
     
     public var modelInfo: ModelInfoModel {
@@ -92,8 +92,8 @@ extension EasyDeviceUtils {
         return DiskSpaceModel()
     }
     
-    public var screen: ScreenInfoModel {
-        return ScreenInfoModel()
+    public var screen: Screen {
+        return Screen()
     }
     
     public struct SystemInfo {
