@@ -23,14 +23,14 @@ class ViewController: UIViewController {
         let device = EasyDeviceUtils.shared
         deviceInfo["App Identifier"] = device.appIdentifier ?? ""
         deviceInfo["Locale code"] = device.localeCode ?? ""
-        deviceInfo["Battery level"] = "\(device.battery.level)"
-        deviceInfo["Battery state"] = device.battery.state.description
+        deviceInfo["Battery level"] = "\(EasyDeviceUtils.battery.state.level)"
+        deviceInfo["Battery state"] = EasyDeviceUtils.battery.state.description
         deviceInfo["User device name"] = device.userDeviceName
         deviceInfo["Model device name"] = device.modelInfo.modelDevice
         deviceInfo["Model name"] = device.modelInfo.modelString
         deviceInfo["Mobile country code"] = device.carrierInfo.mobileCountryCode
         deviceInfo["Mobile provider name"] = device.carrierInfo.providerName
-        deviceInfo["Device screen brightness"] = "\(device.screen.brightness)"
+        deviceInfo["Device screen brightness"] = "\(EasyDeviceUtils.screen.brightness)"
         deviceInfo["Device wifi ssid"] = device.wifiInfo.ssid
 
         strings = deviceInfo.map { "\($0.key): \($0.value)" }

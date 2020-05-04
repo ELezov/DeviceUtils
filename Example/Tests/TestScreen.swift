@@ -13,10 +13,8 @@ class TestScreen: XCTestCase {
 
     func testScreen() {
         
-        let screen = EasyDeviceUtils.shared.screen
-        
-        XCTAssertNotEqual(screen.isPortrait, screen.isLandscape)
-        
+        let screen = EasyDeviceUtils.screen
+                
         XCTAssertTrue(0 <= screen.brightness, "Brightness is incorrect")
         XCTAssertTrue(screen.brightness <= 1, "Brightness is incorrect")
 

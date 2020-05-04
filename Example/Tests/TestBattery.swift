@@ -12,19 +12,19 @@ import EasyDeviceUtils
 class TestBattery: XCTestCase {
 
     func testBatteryLevel() {
-        let batteryValue = EasyDeviceUtils.shared.batteryInfo.batteryLevel
+        let batteryValue = EasyDeviceUtils.battery.state.level
 
         #if targetEnvironment(simulator)
             XCTAssertEqual(batteryValue, 100)
         #else
-            XCTAssertTrue(0<=batteryValue<=1, "battery level is incorrect")
+            XCTAssertTrue(0<=batteryValue<=100, "battery level is incorrect")
         #endif
     }
     
     func testBatteryState() {
-        let batteryState = EasyDeviceUtils.shared.batteryInfo.state
+        let batteryState = EasyDeviceUtils.battery.state
         #if targetEnvironment(simulator)
-        XCTAssertEqual(batteryState, b.State.simulator)
+        XCTAssertEqual(batteryState, Battery.State.simulator)
         #endif
     }
 

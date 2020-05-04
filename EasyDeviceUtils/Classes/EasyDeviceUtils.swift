@@ -64,7 +64,7 @@ extension EasyDeviceUtils {
         return SystemInfo()
     }
     
-    public var battery: Battery {
+    static public var battery: Battery {
         return Battery()
     }
     
@@ -92,7 +92,7 @@ extension EasyDeviceUtils {
         return DiskSpaceModel()
     }
     
-    public var screen: Screen {
+    static public var screen: Screen {
         return Screen()
     }
     
