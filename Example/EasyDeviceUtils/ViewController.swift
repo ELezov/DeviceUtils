@@ -21,17 +21,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let device = EasyDeviceUtils.shared
-        deviceInfo["App Identifier"] = device.appIdentifier ?? ""
-        deviceInfo["Locale code"] = device.localeCode ?? ""
+        deviceInfo["App Identifier"] = EasyDeviceUtils.appIdentifier ?? ""
+        deviceInfo["Locale code"] = EasyDeviceUtils.localeCode ?? ""
         deviceInfo["Battery level"] = "\(EasyDeviceUtils.battery.state.level)"
         deviceInfo["Battery state"] = EasyDeviceUtils.battery.state.description
-        deviceInfo["User device name"] = device.userDeviceName
-        deviceInfo["Model device name"] = device.modelInfo.modelDevice
-        deviceInfo["Model name"] = device.modelInfo.modelString
-        deviceInfo["Mobile country code"] = device.carrierInfo.mobileCountryCode
-        deviceInfo["Mobile provider name"] = device.carrierInfo.providerName
+        deviceInfo["User device name"] = EasyDeviceUtils.userDeviceName
+        deviceInfo["Model device name"] = EasyDeviceUtils.model.fullName
+        deviceInfo["Model name"] = EasyDeviceUtils.model.name
+        deviceInfo["Mobile country code"] = EasyDeviceUtils.carrier.mobileCountryCode
+        deviceInfo["Mobile provider name"] = EasyDeviceUtils.carrier.providerName
         deviceInfo["Device screen brightness"] = "\(EasyDeviceUtils.screen.brightness)"
-        deviceInfo["Device wifi ssid"] = device.wifiInfo.ssid
+        deviceInfo["Device wifi ssid"] = EasyDeviceUtils.wifi.ssid
 
         strings = deviceInfo.map { "\($0.key): \($0.value)" }
         tableView.dataSource = self

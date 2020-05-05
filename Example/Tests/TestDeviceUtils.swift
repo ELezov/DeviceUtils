@@ -11,16 +11,13 @@ import EasyDeviceUtils
 
 class TestDeviceUtils: XCTestCase {
 
-    func testIdentifier() {
-        let deviceUtils = EasyDeviceUtils.shared
-        
-        XCTAssertTrue(deviceUtils.appIdentifier != nil, "appIdentifier is nil")
-        XCTAssertTrue(deviceUtils.uniqueIdentifier != nil, "uniqueIdentifier is nil")
+    func testIdentifier() {        
+        XCTAssertTrue(EasyDeviceUtils.appIdentifier != nil, "appIdentifier is nil")
+        XCTAssertTrue(EasyDeviceUtils.uniqueIdentifier != nil, "uniqueIdentifier is nil")
     }
     
     func testGMTOffset() {
-        let deviceUtils = EasyDeviceUtils.shared
         
-        XCTAssertTrue(deviceUtils.GMToffset < 24, "GMTOffset is incorrect")
+        XCTAssertTrue(EasyDeviceUtils.GMToffset < 24, "GMTOffset is incorrect")
     }
 }

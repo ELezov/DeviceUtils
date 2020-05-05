@@ -9,40 +9,50 @@
 import Foundation
 
 /// Модель для получении информации о дисковом пространстве устройства
-public struct DiskSpaceModel {
+public struct DiskSpace {
     
-    /// Общее место в гб
-    public var totalDiskSpaceInGB: String {
-        return ByteCountFormatter.string(fromByteCount: totalDiskSpaceInBytes, countStyle: ByteCountFormatter.CountStyle.decimal)
+    public struct Space {
+        public var inBytes: Int64
+        
+        public var inGb: String {
+            return ByteCountFormatter.string(fromByteCount: inBytes,
+                                             countStyle: ByteCountFormatter.CountStyle.decimal)
+        }
+        
+        public var inMb: String {
+            return MBFormatter(inBytes)
+        }
+        
+        public init(bytes: Int64) {
+            self.inBytes = bytes
+        }
+        
+        private func MBFormatter(_ bytes: Int64) -> String {
+            let formatter = ByteCountFormatter()
+            formatter.allowedUnits = ByteCountFormatter.Units.useMB
+            formatter.countStyle = ByteCountFormatter.CountStyle.decimal
+            formatter.includesUnit = false
+            return formatter.string(fromByteCount: bytes) as String
+        }
     }
     
-    /// Свободное место в гб
-    public var freeDiskSpaceInGB: String {
-        return ByteCountFormatter.string(fromByteCount: freeDiskSpaceInBytes, countStyle: ByteCountFormatter.CountStyle.decimal)
+    /// Общее место
+    public var total: Space {
+        return Space(bytes: totalDiskSpaceInBytes)
     }
     
-    /// Использованное место в гб
-    public var usedDiskSpaceInGB: String {
-        return ByteCountFormatter.string(fromByteCount: usedDiskSpaceInBytes, countStyle: ByteCountFormatter.CountStyle.decimal)
+    /// Свободное место
+    public var free: Space {
+        return Space(bytes: freeDiskSpaceInBytes)
     }
     
-    /// Общее место в мб
-    public var totalDiskSpaceInMB: String {
-        return MBFormatter(totalDiskSpaceInBytes)
-    }
-    
-    /// Свободное место в мб
-    public var freeDiskSpaceInMB: String {
-        return MBFormatter(freeDiskSpaceInBytes)
-    }
-    
-    /// Свободное место в мб
-    public var usedDiskSpaceInMB: String {
-        return MBFormatter(usedDiskSpaceInBytes)
+    /// Использованное место
+    public var used: Space {
+        return Space(bytes: usedDiskSpaceInBytes)
     }
 }
 
-fileprivate extension DiskSpaceModel {
+fileprivate extension DiskSpace {
     
     var totalDiskSpaceInBytes: Int64 {
         guard let systemAttributes = try? FileManager.default
@@ -71,15 +81,6 @@ fileprivate extension DiskSpaceModel {
     
     var usedDiskSpaceInBytes: Int64 {
         return totalDiskSpaceInBytes - freeDiskSpaceInBytes
-    }
-
-    
-    func MBFormatter(_ bytes: Int64) -> String {
-        let formatter = ByteCountFormatter()
-        formatter.allowedUnits = ByteCountFormatter.Units.useMB
-        formatter.countStyle = ByteCountFormatter.CountStyle.decimal
-        formatter.includesUnit = false
-        return formatter.string(fromByteCount: bytes) as String
     }
     
 }

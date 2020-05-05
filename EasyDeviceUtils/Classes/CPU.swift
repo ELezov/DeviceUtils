@@ -8,34 +8,27 @@
 
 import Foundation
 
-public struct CPUInfoModel {
+public struct CPU {
     
-    public func getCPUName() -> String {
+    public var name: String {
         let processorNames = Array(CPUinfo().keys)
         return processorNames[0]
     }
     
-    public func getCPUSpeed() -> String {
+    public var speed: String {
         let processorSpeed = Array(CPUinfo().values)
         return processorSpeed[0]
     }
-    
+
 }
 
-fileprivate extension CPUInfoModel {
+fileprivate extension CPU {
     
     private func CPUinfo() -> Dictionary<String, String> {
         #if targetEnvironment(simulator)
         let identifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"]!
         #else
-        
-        var systemInfo = utsname()
-        uname(&systemInfo)
-        let machineMirror = Mirror(reflecting: systemInfo.machine)
-        let identifier = machineMirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8 , value != 0 else { return identifier }
-            return identifier + String(UnicodeScalar(UInt8(value)))
-        }
+        let identifier = EasyDeviceUtils.modelIdentifier
         #endif
         
         switch identifier {

@@ -67,7 +67,7 @@ public struct Screen {
             return ( scale == .x3 ? .inches_6_5 : .inches_6_1 )
             
         case 1024:
-            if EasyDeviceUtils.shared.modelInfo.isIpadMini {
+            if EasyDeviceUtils.model.isIpadMini {
                 return .inches_7_9
             } else {
                 return .inches_9_7

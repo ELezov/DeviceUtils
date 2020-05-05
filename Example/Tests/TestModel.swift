@@ -13,10 +13,7 @@ class TestModel: XCTestCase {
 
     func testModel() {
         
-        let model = EasyDeviceUtils.shared.modelInfo
-        
-        
-        if model.isIpadMini {
+        if EasyDeviceUtils.model.isIpadMini {
             XCTAssertTrue(UIDevice.isPad, "isIpadMini definitions is wrong")
         }
     }

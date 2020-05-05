@@ -11,7 +11,6 @@ import UIKit
 // for carrier
 import CoreTelephony
 
-
 public class EasyDeviceUtils {
     
     public static var shared: EasyDeviceUtils = {
@@ -27,11 +26,11 @@ public class EasyDeviceUtils {
         #endif
     }
     
-    public var GMToffset: Int {
+    public static var GMToffset: Int {
         return TimeZone.current.secondsFromGMT() / 3600
     }
     
-    public var localeCode: String? {
+    public static var localeCode: String? {
         return Locale.current.regionCode
     }
 }
@@ -45,54 +44,68 @@ extension EasyDeviceUtils: NSCopying {
 extension EasyDeviceUtils {
     
     // For example: "com.elezov.deviceUtils"
-    public var appIdentifier: String? {
+    public static var appIdentifier: String? {
         return Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String
     }
     
     // An alphanumeric string that uniquely identifies a device to the app’s vendor.
     // For examle: "FDE442FD-6B1E-4AFD-B8BF-F87F699EDFA2"
-    public var uniqueIdentifier: String? {
+    public static var uniqueIdentifier: String? {
         return UIDevice.current.identifierForVendor?.uuidString
     }
     
     // e.g. "My iPhone"
-    public var userDeviceName: String {
+    public static var userDeviceName: String {
         return UIDevice.current.name
     }
     
-    public var systemInfo: SystemInfo {
+    public static var modelIdentifier: String {
+        var systemInfo = utsname()
+        uname(&systemInfo)
+        let machineMirror = Mirror(reflecting: systemInfo.machine)
+        let identifier = machineMirror.children.reduce("") { identifier, element in
+            guard let value = element.value as? Int8, value != 0 else {
+                return identifier
+                
+            }
+            return identifier + String(UnicodeScalar(UInt8(value)))
+        }
+        return identifier
+    }
+    
+    public static var systemInfo: SystemInfo {
         return SystemInfo()
     }
     
-    static public var battery: Battery {
+    public static var battery: Battery {
         return Battery()
     }
     
-    public var modelInfo: ModelInfoModel {
-        return ModelInfoModel()
+    public static var model: Model {
+        return Model()
     }
     
-    public var cpuInfo: CPUInfoModel {
-        return CPUInfoModel()
+    public static var cpu: CPU {
+        return CPU()
     }
     
-    public var processInfo: ProcessInfoModel {
+    public static var processInfo: ProcessInfoModel {
         return ProcessInfoModel()
     }
     
-    public var carrierInfo: CarrierInfoModel {
-        return CarrierInfoModel()
+    public static var carrier: Carrier {
+        return Carrier()
     }
     
-    public var wifiInfo: WifiInfoModel {
-        return WifiInfoModel()
+    public static var wifi: Wifi {
+        return Wifi()
     }
     
-    public var diskSpace: DiskSpaceModel {
-        return DiskSpaceModel()
+    public static var diskSpace: DiskSpace {
+        return DiskSpace()
     }
     
-    static public var screen: Screen {
+    public static var screen: Screen {
         return Screen()
     }
     

@@ -16,7 +16,7 @@ class TestScreen: XCTestCase {
         let screen = EasyDeviceUtils.screen
                 
         XCTAssertTrue(0 <= screen.brightness, "Brightness is incorrect")
-        XCTAssertTrue(screen.brightness <= 1, "Brightness is incorrect")
+        XCTAssertTrue(screen.brightness <= 100, "Brightness is incorrect")
 
     }
 

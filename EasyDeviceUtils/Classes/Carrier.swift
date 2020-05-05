@@ -9,7 +9,7 @@
 import CoreTelephony
 
 /// Модель для получении информации о провайдере
-public struct CarrierInfoModel {
+public struct Carrier {
     
     private var carrier: CTCarrier? {
         return CTTelephonyNetworkInfo().subscriberCellularProvider

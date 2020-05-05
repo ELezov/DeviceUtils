@@ -9,7 +9,7 @@
 import SystemConfiguration.CaptiveNetwork
 
 /// Модель для получения информации о подключенном wifi
-public struct WifiInfoModel {
+public struct Wifi {
     
     public struct Info {
         
